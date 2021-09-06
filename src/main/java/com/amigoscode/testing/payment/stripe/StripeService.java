@@ -11,9 +11,11 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 @Service
+@ConditionalOnProperty(value = "stripe.enabled", havingValue = "true") /*For running the application normal*/
 public class StripeService implements CardPaymentCharger {
 
   private final static RequestOptions requestOptions = RequestOptions.builder()
