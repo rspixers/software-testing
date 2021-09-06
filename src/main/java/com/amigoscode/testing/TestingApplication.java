@@ -11,3 +11,7 @@ public class TestingApplication {
 	}
 
 }
+
+
+/*ALWAYS WRITE THE SMALLEST PART POSSIBLE
+* AND TEST IT!!!!!!!!*/
